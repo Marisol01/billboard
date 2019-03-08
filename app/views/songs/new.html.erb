@@ -1,0 +1,25 @@
+<header>
+<title>Billboard</title>
+
+</header>
+
+<body>
+
+<h2>Create New Song</h2>
+
+
+<%= form_for [@artists, @songs] do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, value: @artists.name %>
+<br>
+<br>
+<% f.label :artist_id %>
+<% f.text_field :artist_id, value: @artists.id %>
+<%= f.label :title %>
+<%= f.text_field :title, required: true, autofocus: true %> 
+<br>
+<br>
+<%= f.submit %>
+<% end %>
+
+</body>

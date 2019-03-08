@@ -1,0 +1,22 @@
+<header>
+<title>Billboard</title>
+
+</header>
+
+<body>
+
+<h2>Artist Information</h2>
+
+<p>Name: <%= @artists.name %></p>
+
+<%= link_to "Edit Artist", edit_artist_path(@artists) %>
+
+<p>Song List: </p>
+<br>
+<%= link_to "Create New Song", new_artist_song_path(@artists) %>
+<ul>
+<% @songs.each do |song| %>
+<li><%= link_to song.title  %></li>
+<% end %>
+</ul>
+</body>

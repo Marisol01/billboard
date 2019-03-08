@@ -1,0 +1,20 @@
+<header>
+    <title>Billboard</title>
+
+  </header>
+
+  <body>
+
+  <h2>Select Artist</h2>
+
+  <ul>
+  <% @artists.each do |artist|%>
+   <li> <%= link_to artist.name, artist  %></li>
+  <% end %>
+  </ul>
+
+  <%= link_to "Create an Artist", new_artist_path %>
+  <br>
+  
+
+</body>

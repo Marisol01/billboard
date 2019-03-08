@@ -1,0 +1,21 @@
+<header>
+    <title>Billboard</title>
+
+  </header>
+
+  <body>
+
+  <h2>Chart Information</h2>
+
+  <p>Name: <%= @charts.chart_name %></p>
+
+  <%= link_to "Edit Chart List", edit_chart_path(@charts) %>
+
+  <ol>
+    <% @charts.each do |chart| %>
+    <li><%= link_to chart.song_title  %></li>
+    <% end %>
+  </ol>
+
+</table>
+</body>
